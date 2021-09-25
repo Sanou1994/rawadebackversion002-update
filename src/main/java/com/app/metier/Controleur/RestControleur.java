@@ -49,6 +49,10 @@ public class RestControleur {
 		return service.getAllDates();
 	}
   //LA PARTIE CRUD DE SOLDEREEL   
+	 @PostMapping("/soldereels/rechercher/id/date")
+	    public  List<Soldereel> soldereelJournees( @RequestBody PositionPost position){
+	    	return service.getSoldereelByIdUAndDate(position.getIdU(), position.getDate());
+	     }
     @GetMapping("/soldereels")
     public List<Soldereel> listeSoldeReels() {
         return service.getAllSoldeReels();
@@ -72,6 +76,10 @@ public class RestControleur {
         return service.deleteSoldeSoldeReel(userId);
     }
   //LA PARTIE CRUD DE SOLDECLOTURERJOURNEE   
+    @PostMapping("/soldecloturerjournes/rechercher/id/date")
+    public  List<SoldeCloturerJournee> soldeCloturerJourneeJournees( @RequestBody PositionPost position){
+    	return service.getSoldeCloturerJourneeByIdUAndDate(position.getIdU(), position.getDate());
+     }
     @GetMapping("/soldecloturerjournes")
     public List<SoldeCloturerJournee> listeSoldeCloturerJournes() {
         return service.getAllSoldeCloturerJournees();

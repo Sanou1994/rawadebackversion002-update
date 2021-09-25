@@ -18,12 +18,14 @@ import com.app.metier.entities.history;
 @Component
 public interface IService {
 	//PARTIE SOLDEREEL
+    public List<Soldereel>getSoldereelByIdUAndDate( int id,String date) ;
 	public List<Soldereel>getAllSoldeReels() ;
     public Soldereel getSoldeReelById( int userId);
     public Soldereel createSoldeReelJournee( Soldereel user) ;
     public Soldereel updateSoldeReelJournee( int userId,  Soldereel ad);
     public Map<String, Boolean> deleteSoldeSoldeReel( int userId) ;
       //PARTIE SOLDECLOTURER
+    public List<SoldeCloturerJournee>getSoldeCloturerJourneeByIdUAndDate( int id,String date) ;
       public List<SoldeCloturerJournee>getAllSoldeCloturerJournees() ;
       public SoldeCloturerJournee getSoldeCloturerJourneeById( int userId);
       public SoldeCloturerJournee createSoldeCloturerJournee( SoldeCloturerJournee user) ;

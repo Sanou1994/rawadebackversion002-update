@@ -1757,4 +1757,16 @@ public class RestService  implements IService {
         return response;
 	}
 
+	@Override
+	public List<Soldereel> getSoldereelByIdUAndDate(int id, String date) {
+		// TODO Auto-generated method stub
+		return soldeReelRepository.findByIdUAndDate(id, date);
+	}
+
+	@Override
+	public List<SoldeCloturerJournee> getSoldeCloturerJourneeByIdUAndDate(int id, String date) {
+		// TODO Auto-generated method stub
+		return soldeCloturerJourneeRepository.findByIdUAndDate(id, date);
+	}
+
 }
